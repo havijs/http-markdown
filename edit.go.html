@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+  form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  textarea {
+    flex: 1 1 auto;
+  }
+
+  #footer {
+    display: flex;
+    height: 100px;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 64px;
+  }
+
+  #save-button {
+    height: 32px;
+  }
+</style>
+
+<body>
+  <form method="post">
+    <textarea name="markdown">{{.Text}}</textarea>
+    <div id="footer">
+      <input id="save-button" type="submit" value="Save">
+    </div>
+  </form>
+</body>
+
+</html>
